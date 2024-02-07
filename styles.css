@@ -1,0 +1,38 @@
+.links{
+    text-decoration: none;
+    color: white;
+}
+#navbar{
+    position:fixed;
+    width: 100%;
+    z-index: 1;
+}
+img{
+    width: 157px;
+    height: 250px;
+}
+#welcome-div{
+padding:50px 20px 120px 50px;
+}
+.card-title{
+    padding:5px;
+    margin-bottom:10px; 
+}
+#projects{
+    margin: auto;
+    padding: 10px;
+}
+
+.list-items{
+    list-style: none;
+    display: inline-block;
+    padding: 2px 15px 2px 15px;
+    font-size: 2em;
+    color: black;
+    
+}
+@media screen and (max-width:760px) {
+    .navbar{
+        display:none;
+    }
+}

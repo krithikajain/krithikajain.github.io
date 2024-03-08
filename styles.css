@@ -7,17 +7,12 @@
     width: 100%;
     z-index: 1;
 }
-img{
-    width: 157px;
-    height: 250px;
+
+.navbar-nav{
+    transition:all 0.3s ease;
 }
-#welcome-div{
-padding:50px 20px 120px 50px;
-}
-.card-title{
-    padding:5px;
-    margin-bottom:10px; 
-}
+
+
 #projects{
     margin: auto;
     padding: 10px;
@@ -26,11 +21,15 @@ padding:50px 20px 120px 50px;
 .list-items{
     list-style: none;
     display: inline-block;
-    padding: 2px 15px 2px 15px;
+    padding: 2px 8px 2px 8px;
     font-size: 2em;
     color: black;
-    
 }
+.list-items i{
+    color: black;
+    font-size: 68% ;
+}
+
 @media screen and (max-width:760px) {
     .navbar{
         display:none;

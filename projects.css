@@ -7,7 +7,7 @@
 }
 
  .card:hover {
-     transform: translateY(-30px);
+     transform: translateX(-30px);
  }
 
  .card-title {
@@ -36,4 +36,8 @@
 .card-body{
     display: flex;
     justify-content: space-between;
+}
+
+.links{
+    text-decoration: none;
 }

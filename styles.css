@@ -1,3 +1,4 @@
+/* Typography */
 body,
 h1,
 h2,
@@ -5,23 +6,155 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.w3-row-padding img {
-    margin-bottom: 12px
+/* Layout and Containers */
+.main-content {
+  padding: 2rem;
 }
 
-.bgimg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('profile_pic.jpeg');
-    min-height: 100%;
+.content-section {
+  padding: 40px;
 }
- .content-section {
-    padding: 40px;
+
+/* Sidebar for large screens */
+.sidebar {
+  background: url('profile_pic.jpeg') no-repeat center center / cover;
+  width: 100%;
+  height: 300px;
 }
-.w3-sidebar {
-    width: 40%;
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 35%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .main-content,
+  .navbar {
+    margin-left: 35%;
+  }
 }
+
+/* Navigation */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Project Cards */
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Tech List */
+.tech-stack li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+/* Resume Button */
+.resume-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.5s ease;
+  animation: fadeSlideUp 1s ease-out 0.5s both;
+}
+.resume-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tagline Typewriter Animation */
+.tagline {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  animation: typewriter 3.5s steps(40) 1s forwards;
+  border-right: 2px solid white;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+body.dark-mode .card,
+body.dark-mode .project-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+body.dark-mode .project-card .card-title,
+body.dark-mode .project-card .card-text,
+body.dark-mode .project-card .btn,
+body.dark-mode .resume-btn {
+  color: #ffffff;
+}
+body.dark-mode .project-card .btn,
+body.dark-mode .resume-btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+body.dark-mode .project-card .btn:hover,
+body.dark-mode .resume-btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
